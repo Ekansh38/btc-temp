@@ -20,3 +20,18 @@ class MvrvZScoreDaily(models.Model):
     class Meta:
         ordering = ["date"]
         indexes = [models.Index(fields=["-date"])]
+
+
+class RhodlRatioDaily(models.Model):
+    date = models.DateField(unique=True)
+    value = models.DecimalField(max_digits=20, decimal_places=10, null=True)  # core series value
+    class Meta:
+        ordering = ["date"]
+        indexes = [models.Index(fields=["-date"])]
+
+class FundingRatesDaily(models.Model):
+    date = models.DateField(unique=True)
+    value = models.DecimalField(max_digits=20, decimal_places=10, null=True)  # core series value
+    class Meta:
+        ordering = ["date"]
+        indexes = [models.Index(fields=["-date"])]
