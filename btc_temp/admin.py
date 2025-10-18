@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import BitcoinTemperature, MvrvZScoreDaily, RhodlRatioDaily, FundingRatesDaily
+from .models import BitcoinTemperature, MvrvZScoreDaily, RhodlRatioDaily
 
 @admin.register(BitcoinTemperature)
 class BitcoinTemperatureAdmin(admin.ModelAdmin):
@@ -15,7 +15,3 @@ class RhodlRatioDailyAdmin(admin.ModelAdmin):
     list_display = ("date", "value")
     ordering = ("-date",)
 
-@admin.register(FundingRatesDaily)
-class FundingRatesDailyAdmin(admin.ModelAdmin):
-    list_display = ("date", "value")
-    ordering = ("-date",)
