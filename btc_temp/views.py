@@ -11,6 +11,7 @@ def latest(request):
     return JsonResponse({"ts": m.ts.isoformat(), "temperature": float(m.temperature)})
 
 
+
 def history(request):
     rng = request.GET.get("range", "30d")
     days = int(rng[:-1]) if rng.endswith("d") else 30

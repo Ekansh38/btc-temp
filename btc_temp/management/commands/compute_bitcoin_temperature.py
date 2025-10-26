@@ -1,4 +1,3 @@
-# btc_temp/management/commands/compute_bitcoin_temperature.py
 from typing import Optional
 from django.core.management.base import BaseCommand
 from django.db import transaction
